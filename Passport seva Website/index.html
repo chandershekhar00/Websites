@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PassportSeva — India Passport Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ════════════════════ SCREEN 1: HOMEPAGE ════════════════════ -->
+<div id="screen-home" class="screen active">
+
+  <nav class="navbar">
+    <div class="navbar-logo" onclick="showScreen('screen-home')">
+      <span class="flag">🇮🇳</span>
+      Passport<span>Seva</span>
+    </div>
+    <div class="navbar-links">
+      <button class="nav-link" onclick="showScreen('screen-home')">Home</button>
+      <button class="nav-link" onclick="showScreen('screen-home'); scrollToSection('how-it-works')">How it Works</button>
+      <button class="nav-link" onclick="showScreen('screen-home'); scrollToSection('documents')">Documents</button>
+      <button class="nav-link">Track Status</button>
+      <button class="nav-btn" onclick="showScreen('screen-auth')">Sign In / Register</button>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-badge">🔒 Official Govt. Portal</div>
+        <h1>Your Passport,<br><em>Simplified.</em></h1>
+        <p>Apply for a new passport or renew your existing one — online, step-by-step, with real-time guidance at every stage.</p>
+        <div class="hero-actions">
+          <button class="btn-primary" onclick="showScreen('screen-auth')">🚀 Apply Now</button>
+          <button class="btn-secondary" onclick="scrollToSection('how-it-works')">See How It Works</button>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3>Quick Access</h3>
+        <div class="quick-actions">
+          <div class="qa-item" onclick="showScreen('screen-auth')"><span class="qa-icon">📝</span><div class="qa-label">New Application</div></div>
+          <div class="qa-item" onclick="showScreen('screen-auth')"><span class="qa-icon">🔄</span><div class="qa-label">Renew Passport</div></div>
+          <div class="qa-item" onclick="showScreen('screen-auth')"><span class="qa-icon">📍</span><div class="qa-label">Track Status</div></div>
+          <div class="qa-item" onclick="showScreen('screen-auth')"><span class="qa-icon">📅</span><div class="qa-label">Book Appointment</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="stats-strip">
+    <div class="stats-inner">
+      <div class="stat-item"><div class="stat-num">2.4M+</div><div class="stat-label">Applications Processed</div></div>
+      <div class="stat-item"><div class="stat-num">98.7%</div><div class="stat-label">Satisfaction Rate</div></div>
+      <div class="stat-item"><div class="stat-num">15 Days</div><div class="stat-label">Avg. Processing Time</div></div>
+      <div class="stat-item"><div class="stat-num">500+</div><div class="stat-label">PSK Locations</div></div>
+    </div>
+  </div>
+
+  <div id="how-it-works" class="section">
+    <div class="section-label">Process</div>
+    <div class="section-title">How It Works</div>
+    <div class="section-sub">Complete your passport application in 6 simple steps. Takes about 20–30 minutes.</div>
+    <div class="steps-grid">
+      <div class="step-card"><span class="step-icon">👤</span><div class="step-num">1</div><h4>Create Account</h4><p>Register with your mobile number using OTP verification. No passwords to remember.</p></div>
+      <div class="step-card"><span class="step-icon">📋</span><div class="step-num">2</div><h4>Fill Application</h4><p>Complete a step-by-step guided form. Your progress auto-saves so you never lose work.</p></div>
+      <div class="step-card"><span class="step-icon">📄</span><div class="step-num">3</div><h4>Upload Documents</h4><p>Upload required documents with a clear checklist. We verify formats instantly.</p></div>
+      <div class="step-card"><span class="step-icon">📅</span><div class="step-num">4</div><h4>Book Appointment</h4><p>Choose your nearest PSK and a time slot that works for you.</p></div>
+      <div class="step-card"><span class="step-icon">🏛️</span><div class="step-num">5</div><h4>Visit PSK</h4><p>Visit the Passport Seva Kendra with your original documents for verification.</p></div>
+      <div class="step-card"><span class="step-icon">📬</span><div class="step-num">6</div><h4>Receive Passport</h4><p>Your passport is delivered to your doorstep via Speed Post. Track it online.</p></div>
+    </div>
+  </div>
+
+  <div id="documents" style="background:var(--white);padding:8px 0;">
+    <div class="section">
+      <div class="section-label">Checklist</div>
+      <div class="section-title">Documents Required</div>
+      <div class="section-sub">Keep these documents ready before you begin your application.</div>
+      <div class="docs-grid">
+        <div class="doc-card">
+          <h4>🆔 Identity &amp; Address Proof</h4>
+          <ul class="doc-list">
+            <li>Aadhaar Card (required for OTP auth)</li>
+            <li>Voter ID / PAN Card</li>
+            <li>Driving License</li>
+            <li>Utility bill (not older than 3 months)</li>
+            <li>Bank Statement with address</li>
+          </ul>
+        </div>
+        <div class="doc-card">
+          <h4>📸 Photographs</h4>
+          <ul class="doc-list">
+            <li>2 recent passport-size photographs (white background)</li>
+            <li>Photo size: 35mm × 45mm</li>
+            <li>Face should cover 70–80% of the frame</li>
+            <li>No spectacles, no headgear (exceptions for religious reasons)</li>
+          </ul>
+        </div>
+        <div class="doc-card">
+          <h4>📅 Date of Birth Proof</h4>
+          <ul class="doc-list">
+            <li>Birth Certificate (issued by Municipal Authority)</li>
+            <li>School Transfer Certificate with DOB</li>
+            <li>Matriculation Certificate</li>
+            <li>Aadhaar Card showing DOB</li>
+          </ul>
+        </div>
+        <div class="doc-card">
+          <h4>📋 For Renewals</h4>
+          <ul class="doc-list">
+            <li>Original old passport (if available)</li>
+            <li>Self-attested copy of first and last page</li>
+            <li>Self-attested copy of visa page (if applicable)</li>
+            <li>Address proof if address changed</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand">🇮🇳 PassportSeva</div>
+          <div class="footer-tagline">Making India's passport services accessible, simple, and stress-free for every citizen.</div>
+        </div>
+        <div class="footer-links"><h5>Services</h5><ul><li><a>New Passport</a></li><li><a>Passport Renewal</a></li><li><a>Lost Passport</a></li><li><a>Track Application</a></li></ul></div>
+        <div class="footer-links"><h5>Help</h5><ul><li><a>FAQs</a></li><li><a>Contact Support</a></li><li><a>PSK Locator</a></li><li><a>Fee Calculator</a></li></ul></div>
+        <div class="footer-links"><h5>Legal</h5><ul><li><a>Privacy Policy</a></li><li><a>Terms of Service</a></li><li><a>Accessibility</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Ministry of External Affairs, Government of India. All rights reserved.</span>
+        <span>Designed for Anshumat Foundation</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ════════════════════ SCREEN 2: AUTH ════════════════════ -->
+<div id="screen-auth" class="screen">
+  <nav class="navbar">
+    <div class="navbar-logo" onclick="showScreen('screen-home')"><span class="flag">🇮🇳</span>Passport<span>Seva</span></div>
+    <div class="navbar-links"><button class="nav-link" onclick="showScreen('screen-home')">← Back to Home</button></div>
+  </nav>
+  <div class="auth-wrap">
+    <div class="auth-box">
+      <div class="auth-logo">🇮🇳 PassportSeva</div>
+      <div class="tab-row">
+        <button class="tab-btn active" id="tab-login" onclick="switchTab('login')">Sign In</button>
+        <button class="tab-btn" id="tab-signup" onclick="switchTab('signup')">Register</button>
+      </div>
+
+      <div id="panel-login">
+        <div class="auth-title">Welcome back</div>
+        <div class="auth-subtitle">Sign in with your mobile number using OTP — no password needed.</div>
+        <div class="form-group">
+          <label class="form-label">Mobile Number</label>
+          <div class="otp-row">
+            <div class="otp-input-wrap"><input class="form-input" id="login-mobile" type="tel" placeholder="+91 98765 43210" maxlength="15"></div>
+            <button class="otp-btn" onclick="sendOTP('login')">Send OTP</button>
+          </div>
+          <div class="form-hint">We'll send a 6-digit OTP to your registered mobile</div>
+        </div>
+        <div id="login-otp-row" style="display:none">
+          <div class="form-group">
+            <label class="form-label">Enter OTP</label>
+            <input class="form-input" id="login-otp" type="text" placeholder="• • • • • •" maxlength="6" style="letter-spacing:6px;font-size:1.2rem;text-align:center;">
+            <div class="form-hint">OTP sent ✓ — Resend in 30s</div>
+          </div>
+        </div>
+        <div class="inline-error" id="login-error">⚠️ Invalid OTP. Please try again.</div>
+        <button class="btn-full" onclick="doLogin()">Sign In Securely →</button>
+        <div class="divider">or</div>
+        <div style="text-align:center;font-size:0.82rem;color:var(--gray-400);">Demo login: <strong>hire-me@anshumat.org</strong> / <strong>HireMe@2025!</strong></div>
+        <div class="auth-footer-note">Don't have an account? <a onclick="switchTab('signup')">Register here</a></div>
+      </div>
+
+      <div id="panel-signup" style="display:none">
+        <div class="auth-title">Create account</div>
+        <div class="auth-subtitle">Register to start your passport application. Takes less than 2 minutes.</div>
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">First Name</label><input class="form-input" id="su-fname" type="text" placeholder="Rahul"></div>
+          <div class="form-group"><label class="form-label">Last Name</label><input class="form-input" id="su-lname" type="text" placeholder="Sharma"></div>
+        </div>
+        <div class="form-group"><label class="form-label">Date of Birth</label><input class="form-input" id="su-dob" type="date"></div>
+        <div class="form-group">
+          <label class="form-label">Mobile Number</label>
+          <div class="otp-row">
+            <div class="otp-input-wrap"><input class="form-input" id="su-mobile" type="tel" placeholder="+91 98765 43210"></div>
+            <button class="otp-btn" onclick="sendOTP('signup')">Send OTP</button>
+          </div>
+        </div>
+        <div id="su-otp-row" style="display:none">
+          <div class="form-group"><label class="form-label">Verify OTP</label><input class="form-input" id="su-otp" type="text" placeholder="• • • • • •" maxlength="6" style="letter-spacing:6px;font-size:1.2rem;text-align:center;"></div>
+        </div>
+        <div class="form-group"><label class="form-label">City / District</label><input class="form-input" id="su-city" type="text" placeholder="New Delhi"></div>
+        <button class="btn-full" onclick="doSignup()">Create Account →</button>
+        <div class="auth-footer-note">Already have an account? <a onclick="switchTab('login')">Sign in</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════ SCREEN 3: DASHBOARD ════════════════════ -->
+<div id="screen-dashboard" class="screen">
+  <nav class="navbar">
+    <div class="navbar-logo" onclick="showScreen('screen-home')"><span class="flag">🇮🇳</span>Passport<span>Seva</span></div>
+    <div class="navbar-links">
+      <span class="chip">🟢 Logged in as Rahul Sharma</span>
+      <button class="nav-btn" onclick="doLogout()">Sign Out</button>
+    </div>
+  </nav>
+  <div class="dashboard-layout">
+    <aside class="sidebar">
+      <div class="sidebar-section-label">Main</div>
+      <button class="sidebar-link active"><span class="icon">🏠</span> Dashboard</button>
+      <button class="sidebar-link" onclick="startNewApplication()"><span class="icon">📝</span> New Application</button>
+      <button class="sidebar-link"><span class="icon">📍</span> Track Status</button>
+      <button class="sidebar-link"><span class="icon">📅</span> Appointments</button>
+      <div class="sidebar-section-label">Records</div>
+      <button class="sidebar-link"><span class="icon">📂</span> My Applications</button>
+      <button class="sidebar-link"><span class="icon">📄</span> Documents</button>
+      <button class="sidebar-link"><span class="icon">🧾</span> Receipts</button>
+      <div class="sidebar-section-label">Account</div>
+      <button class="sidebar-link"><span class="icon">⚙️</span> Settings</button>
+      <button class="sidebar-link"><span class="icon">❓</span> Help &amp; Support</button>
+      <div class="sidebar-user">
+        <div class="sidebar-user-name">Rahul Sharma</div>
+        <div class="sidebar-user-email">hire-me@anshumat.org</div>
+      </div>
+    </aside>
+    <main class="dashboard-content">
+      <div class="dash-header">
+        <div><div class="dash-title">Good morning, Rahul 👋</div><div class="dash-subtitle">You have 1 draft application in progress.</div></div>
+        <button class="btn-primary" onclick="startNewApplication()">+ New Application</button>
+      </div>
+      <div class="dash-cards">
+        <div class="dash-card blue"><div class="dash-card-label">Applications</div><div class="dash-card-value">2</div><div class="dash-card-meta">1 active · 1 draft</div></div>
+        <div class="dash-card teal"><div class="dash-card-label">Appointments</div><div class="dash-card-value">1</div><div class="dash-card-meta">Mar 28 · Delhi PSK</div></div>
+        <div class="dash-card amber"><div class="dash-card-label">Documents</div><div class="dash-card-value">4/6</div><div class="dash-card-meta">2 pending upload</div></div>
+      </div>
+      <div class="app-table-wrap">
+        <div class="app-table-header"><div class="app-table-title">My Applications</div><button class="btn-sm" onclick="startNewApplication()">+ Start New</button></div>
+        <table>
+          <thead><tr><th>Application ID</th><th>Type</th><th>Started</th><th>Status</th><th>Action</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>PSK-2025-00412</strong></td><td>New Passport</td><td>20 Mar 2025</td>
+              <td><span class="status-badge badge-processing">⏳ Processing</span></td>
+              <td><button class="btn-sm" style="background:transparent;color:var(--blue);border:1px solid var(--blue);">Track</button></td>
+            </tr>
+            <tr>
+              <td><strong>PSK-2025-00398</strong></td><td>New Passport</td><td>18 Mar 2025</td>
+              <td><span class="status-badge badge-draft">✏️ Draft</span></td>
+              <td><button class="btn-sm" onclick="startNewApplication()">Continue</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div class="app-table-wrap" style="padding:20px 24px;">
+          <h4 style="font-family:var(--font-display);font-weight:700;color:var(--navy);margin-bottom:16px;">📅 Upcoming Appointment</h4>
+          <div style="font-size:0.875rem;color:var(--gray-600);line-height:1.8;">
+            <div><strong>Date:</strong> Friday, 28 March 2025</div>
+            <div><strong>Time:</strong> 10:30 AM</div>
+            <div><strong>PSK:</strong> Dwarka, New Delhi</div>
+            <div><strong>Token:</strong> A-047</div>
+          </div>
+          <button class="btn-sm" style="margin-top:14px;">Download Receipt 📥</button>
+        </div>
+        <div class="app-table-wrap" style="padding:20px 24px;">
+          <h4 style="font-family:var(--font-display);font-weight:700;color:var(--navy);margin-bottom:16px;">⚡ Quick Actions</h4>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <button class="btn-sm" style="background:transparent;color:var(--navy);border:1px solid var(--gray-200);text-align:left;padding:10px 14px;" onclick="startNewApplication()">📝 Continue Draft Application</button>
+            <button class="btn-sm" style="background:transparent;color:var(--navy);border:1px solid var(--gray-200);text-align:left;padding:10px 14px;">📄 Upload Missing Documents</button>
+            <button class="btn-sm" style="background:transparent;color:var(--navy);border:1px solid var(--gray-200);text-align:left;padding:10px 14px;">📥 Download Application PDF</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- ════════════════════ SCREEN 4: APPLICATION FORM ════════════════════ -->
+<div id="screen-form" class="screen">
+  <nav class="navbar">
+    <div class="navbar-logo" onclick="showScreen('screen-dashboard')"><span class="flag">🇮🇳</span>Passport<span>Seva</span></div>
+    <div class="navbar-links"><span class="chip" id="progress-chip">Step 1 of 4</span><button class="nav-link" onclick="showScreen('screen-dashboard')">← Dashboard</button></div>
+  </nav>
+  <div class="app-flow-wrap">
+    <div class="flow-container">
+      <div class="flow-header"><div class="flow-title">New Passport Application</div><div class="flow-subtitle">Fill in the details carefully. All fields marked * are mandatory.</div></div>
+
+      <div class="stepper" id="form-stepper">
+        <div class="step-item done" id="fstep-0"><div class="step-circle">✓</div><div class="step-item-label">Intro</div></div>
+        <div class="step-item active" id="fstep-1"><div class="step-circle">1</div><div class="step-item-label">Personal</div></div>
+        <div class="step-item" id="fstep-2"><div class="step-circle">2</div><div class="step-item-label">Address</div></div>
+        <div class="step-item" id="fstep-3"><div class="step-circle">3</div><div class="step-item-label">Family</div></div>
+        <div class="step-item" id="fstep-4"><div class="step-circle">4</div><div class="step-item-label">Other</div></div>
+      </div>
+
+      <div class="autosave-bar">
+        <div class="autosave-indicator"><div class="autosave-dot"></div><span id="autosave-text">Draft saved · Last saved at <strong>10:42 AM</strong></span></div>
+        <span style="font-size:0.78rem;color:var(--gray-400);">Progress: Step 1 of 4</span>
+      </div>
+
+      <!-- STEP 1 -->
+      <div id="form-step-1">
+        <div class="form-card">
+          <div class="form-card-header"><div class="form-card-icon">👤</div><div><div class="form-card-title">Personal Information</div><div class="form-card-subtitle">As per Aadhaar / Official documents</div></div></div>
+          <div class="form-card-body">
+            <div class="form-row">
+              <div class="form-group"><label class="form-label">Given Name *</label><input class="form-input" id="f-givenname" type="text" placeholder="Rahul" value="Rahul"></div>
+              <div class="form-group"><label class="form-label">Surname *</label><input class="form-input" id="f-surname" type="text" placeholder="Sharma" value="Sharma"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label class="form-label">Date of Birth *</label><input class="form-input" id="f-dob" type="date" value="1998-04-15"></div>
+              <div class="form-group"><label class="form-label">Place of Birth *</label><input class="form-input" id="f-pob" type="text" placeholder="New Delhi"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label class="form-label">Gender *</label><select class="form-select" id="f-gender"><option value="">Select gender</option><option value="M" selected>Male</option><option value="F">Female</option><option value="O">Other</option></select></div>
+              <div class="form-group"><label class="form-label">Marital Status *</label><select class="form-select" id="f-marital"><option>Single</option><option>Married</option><option>Divorced</option><option>Widowed</option></select></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label"><span class="tooltip-wrap">Aadhaar Number *<span class="tooltip-icon">?</span><span class="tooltip-content">12-digit Aadhaar for identity verification</span></span></label>
+                <input class="form-input" id="f-aadhaar" type="text" placeholder="XXXX XXXX XXXX" maxlength="14">
+              </div>
+              <div class="form-group"><label class="form-label">PAN Number</label><input class="form-input" id="f-pan" type="text" placeholder="ABCDE1234F" maxlength="10"></div>
+            </div>
+            <div class="form-group"><label class="form-label">Email Address *</label><input class="form-input" id="f-email" type="email" placeholder="rahul.sharma@email.com"></div>
+            <div class="inline-error" id="form1-error">⚠️ Please fill in all required fields.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div id="form-step-2" style="display:none">
+        <div class="form-card">
+          <div class="form-card-header"><div class="form-card-icon">🏠</div><div><div class="form-card-title">Present &amp; Permanent Address</div><div class="form-card-subtitle">Enter your current residential address</div></div></div>
+          <div class="form-card-body">
+            <div class="form-group full"><label class="form-label">Address Line 1 *</label><input class="form-input" type="text" placeholder="House No., Street Name"></div>
+            <div class="form-group full"><label class="form-label">Address Line 2</label><input class="form-input" type="text" placeholder="Locality, Landmark"></div>
+            <div class="form-row cols-3">
+              <div class="form-group"><label class="form-label">City *</label><input class="form-input" type="text" placeholder="New Delhi"></div>
+              <div class="form-group"><label class="form-label">State *</label><select class="form-select"><option>Delhi</option><option>Maharashtra</option><option>Karnataka</option><option>Uttar Pradesh</option><option>Tamil Nadu</option></select></div>
+              <div class="form-group"><label class="form-label">PIN Code *</label><input class="form-input" type="text" placeholder="110001" maxlength="6"></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;margin:16px 0;padding:12px 14px;background:var(--gray-50);border-radius:10px;cursor:pointer;" onclick="toggleSameAddress()">
+              <input type="checkbox" id="same-address" style="width:18px;height:18px;cursor:pointer;">
+              <label for="same-address" style="font-size:0.875rem;font-weight:500;color:var(--gray-800);cursor:pointer;">Permanent address is same as present address</label>
+            </div>
+            <div id="perm-address-section">
+              <div style="border-top:1px solid var(--gray-100);padding-top:20px;"><div style="font-family:var(--font-display);font-weight:700;color:var(--navy);margin-bottom:16px;font-size:0.9rem;">Permanent Address</div>
+                <div class="form-group full"><input class="form-input" type="text" placeholder="Address Line 1"></div>
+                <div class="form-row cols-3"><div class="form-group"><input class="form-input" type="text" placeholder="City"></div><div class="form-group"><select class="form-select"><option>Select State</option></select></div><div class="form-group"><input class="form-input" type="text" placeholder="PIN Code"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div id="form-step-3" style="display:none">
+        <div class="form-card">
+          <div class="form-card-header"><div class="form-card-icon">👨‍👩‍👧</div><div><div class="form-card-title">Family Details</div><div class="form-card-subtitle">As per official government records</div></div></div>
+          <div class="form-card-body">
+            <div class="form-row">
+              <div class="form-group"><label class="form-label">Father's Given Name *</label><input class="form-input" type="text" placeholder="Suresh"></div>
+              <div class="form-group"><label class="form-label">Father's Surname *</label><input class="form-input" type="text" placeholder="Sharma"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label class="form-label">Mother's Given Name *</label><input class="form-input" type="text" placeholder="Priya"></div>
+              <div class="form-group"><label class="form-label">Mother's Surname *</label><input class="form-input" type="text" placeholder="Sharma"></div>
+            </div>
+            <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:14px;margin:8px 0;"><div style="font-size:0.82rem;color:#92400e;font-weight:600;">ℹ️ Note</div><div style="font-size:0.8rem;color:#78350f;margin-top:4px;">Names must match exactly as per your birth certificate / school certificate.</div></div>
+            <div class="form-row">
+              <div class="form-group"><label class="form-label">Nationality *</label><input class="form-input" type="text" value="Indian" readonly style="background:var(--gray-50);color:var(--gray-400);"></div>
+              <div class="form-group"><label class="form-label">Occupation *</label><select class="form-select"><option>Student</option><option>Employed — Private</option><option>Employed — Government</option><option>Self-employed</option><option>Retired</option><option>Homemaker</option><option>Other</option></select></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 4 -->
+      <div id="form-step-4" style="display:none">
+        <div class="form-card">
+          <div class="form-card-header"><div class="form-card-icon">📋</div><div><div class="form-card-title">Application Details</div><div class="form-card-subtitle">Passport type and additional declarations</div></div></div>
+          <div class="form-card-body">
+            <div class="form-row">
+              <div class="form-group"><label class="form-label">Application Type *</label><select class="form-select"><option>Fresh Passport</option><option>Renewal</option><option>Lost Passport</option><option>Change of Personal Details</option></select></div>
+              <div class="form-group"><label class="form-label">Passport Booklet Type *</label><select class="form-select"><option>36 Pages — ₹1,500</option><option>60 Pages — ₹2,000</option></select></div>
+            </div>
+            <div class="form-group"><label class="form-label">Validity Required</label><select class="form-select"><option>10 Years (Normal)</option><option>5 Years (Minor)</option><option>Urgent — Tatkal (Additional ₹2,000)</option></select></div>
+            <div style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:10px;padding:16px;margin-top:8px;">
+              <div style="font-family:var(--font-display);font-weight:700;color:var(--navy);margin-bottom:12px;font-size:0.875rem;">📋 Declarations</div>
+              <div style="display:flex;flex-direction:column;gap:10px;">
+                <label style="display:flex;align-items:flex-start;gap:10px;font-size:0.82rem;color:var(--gray-600);cursor:pointer;"><input type="checkbox" style="width:16px;height:16px;flex-shrink:0;margin-top:1px;">I have never been deported or refused a visa from any foreign country.</label>
+                <label style="display:flex;align-items:flex-start;gap:10px;font-size:0.82rem;color:var(--gray-600);cursor:pointer;"><input type="checkbox" style="width:16px;height:16px;flex-shrink:0;margin-top:1px;">I do not hold any other Indian Passport other than the one submitted with this application.</label>
+                <label style="display:flex;align-items:flex-start;gap:10px;font-size:0.82rem;color:var(--gray-600);cursor:pointer;"><input type="checkbox" style="width:16px;height:16px;flex-shrink:0;margin-top:1px;">I confirm that all information provided is true and accurate to the best of my knowledge.</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-footer-nav">
+        <button class="btn-back" id="form-back-btn" onclick="formPrev()" style="visibility:hidden">← Back</button>
+        <span id="form-step-label" style="font-size:0.82rem;color:var(--gray-400);">Step 1 of 4 — Personal Info</span>
+        <button class="btn-next" id="form-next-btn" onclick="formNext()">Next: Address →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════ SCREEN 5: DOCUMENT UPLOAD ════════════════════ -->
+<div id="screen-docs" class="screen">
+  <nav class="navbar">
+    <div class="navbar-logo" onclick="showScreen('screen-dashboard')"><span class="flag">🇮🇳</span>Passport<span>Seva</span></div>
+    <div class="navbar-links"><span class="chip">Step 5 of 6</span><button class="nav-link" onclick="showScreen('screen-dashboard')">← Dashboard</button></div>
+  </nav>
+  <div class="app-flow-wrap">
+    <div class="flow-container">
+      <div class="flow-header"><div class="flow-title">Document Upload</div><div class="flow-subtitle">Upload clear, readable copies. Supported: JPG, PNG, PDF (max 2MB each).</div></div>
+      <div class="stepper">
+        <div class="step-item done"><div class="step-circle">✓</div><div class="step-item-label">Personal</div></div>
+        <div class="step-item done"><div class="step-circle">✓</div><div class="step-item-label">Address</div></div>
+        <div class="step-item done"><div class="step-circle">✓</div><div class="step-item-label">Family</div></div>
+        <div class="step-item done"><div class="step-circle">✓</div><div class="step-item-label">Details</div></div>
+        <div class="step-item active"><div class="step-circle">5</div><div class="step-item-label">Documents</div></div>
+        <div class="step-item"><div class="step-circle">6</div><div class="step-item-label">Appointment</div></div>
+      </div>
+      <div class="autosave-bar">
+        <div class="autosave-indicator"><div class="autosave-dot"></div><span id="doc-save-text">4 of 6 documents uploaded</span></div>
+        <span style="font-size:0.78rem;color:var(--gray-400);">All uploads are encrypted &amp; secure 🔒</span>
+      </div>
+      <div class="form-card">
+        <div class="form-card-header"><div class="form-card-icon">📎</div><div><div class="form-card-title">Required Documents</div><div class="form-card-subtitle">Upload all mandatory documents to proceed</div></div></div>
+        <div class="form-card-body">
+          <div class="upload-grid">
+            <div class="upload-item uploaded" onclick="toggleUpload(this)"><div class="upload-check">✓</div><span class="upload-icon">🆔</span><div class="upload-name">Aadhaar Card *</div><div class="upload-hint">Front &amp; Back · JPG/PNG/PDF · Max 2MB</div><div class="upload-status">✓ aadhaar_front.jpg uploaded</div></div>
+            <div class="upload-item uploaded" onclick="toggleUpload(this)"><div class="upload-check">✓</div><span class="upload-icon">📸</span><div class="upload-name">Passport Photo *</div><div class="upload-hint">White background · 35×45mm · JPG</div><div class="upload-status">✓ photo.jpg uploaded</div></div>
+            <div class="upload-item uploaded" onclick="toggleUpload(this)"><div class="upload-check">✓</div><span class="upload-icon">🎂</span><div class="upload-name">DOB Certificate *</div><div class="upload-hint">Birth cert / School cert · PDF</div><div class="upload-status">✓ birth_cert.pdf uploaded</div></div>
+            <div class="upload-item uploaded" onclick="toggleUpload(this)"><div class="upload-check">✓</div><span class="upload-icon">🏠</span><div class="upload-name">Address Proof *</div><div class="upload-hint">Utility bill / Bank statement · PDF</div><div class="upload-status">✓ address_proof.pdf uploaded</div></div>
+            <div class="upload-item" onclick="toggleUpload(this)"><span class="upload-icon">📋</span><div class="upload-name">PAN Card</div><div class="upload-hint">Optional but recommended · JPG/PDF</div><div class="upload-status">✓ pan_card.jpg uploaded</div></div>
+            <div class="upload-item" onclick="toggleUpload(this)"><span class="upload-icon">🎓</span><div class="upload-name">Educational Certificate</div><div class="upload-hint">Matric / Degree certificate · PDF</div><div class="upload-status">✓ certificate.pdf uploaded</div></div>
+          </div>
+          <div class="doc-tips">
+            <h5>📌 Document Guidelines</h5>
+            <ul>
+              <li>Ensure all documents are clear, legible, and not expired</li>
+              <li>Photos must have a plain white background with no shadows</li>
+              <li>File size must not exceed 2MB per document</li>
+              <li>Scanned documents should be at minimum 200 DPI resolution</li>
+              <li>Documents in languages other than Hindi/English need certified translation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="flow-footer-nav">
+        <button class="btn-back" onclick="showScreen('screen-form')">← Back to Form</button>
+        <span style="font-size:0.82rem;color:var(--gray-400);" id="docs-progress">4 of 6 documents uploaded</span>
+        <button class="btn-next" onclick="showScreen('screen-appt')">Next: Book Appointment →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════ SCREEN 6: APPOINTMENT ════════════════════ -->
+<div id="screen-appt" class="screen">
+  <nav class="navbar">
+    <div class="navbar-logo" onclick="showScreen('screen-dashboard')"><span class="flag">🇮🇳</span>Passport<span>Seva</span></div>
+    <div class="navbar-links"><span class="chip">Step 6 of 6</span><button class="nav-link" onclick="showScreen('screen-dashboard')">← Dashboard</button></div>
+  </nav>
+  <div class="app-flow-wrap">
+    <div class="flow-container">
+      <div class="flow-header"><div class="flow-title">Book Your Appointment</div><div class="flow-subtitle">Select a Passport Seva Kendra near you, pick a date and time slot.</div></div>
+      <div class="stepper">
+        <div class="step-item done"><div class="step-circle">✓</div><div class="step-item-label">Personal</div></div>
+        <div class="step-item done"><div class="step-circle">✓</div><div class="step-item-label">Address</div></div>
+        <div class="step-item done"><div class="step-circle">✓</div><div class="step-item-label">Family</div></div>
+        <div class="step-item done"><div class="step-circle">✓</div><div class="step-item-label">Details</div></div>
+        <div class="step-item done"><div class="step-circle">✓</div><div class="step-item-label">Documents</div></div>
+        <div class="step-item active"><div class="step-circle">6</div><div class="step-item-label">Appointment</div></div>
+      </div>
+      <div class="form-card" style="margin-bottom:16px;">
+        <div class="form-card-header"><div class="form-card-icon">📍</div><div><div class="form-card-title">Select PSK Location</div><div class="form-card-subtitle">Passport Seva Kendra nearest to you</div></div></div>
+        <div class="form-card-body">
+          <div class="form-row">
+            <div class="form-group"><label class="form-label">State / UT *</label><select class="form-select" onchange="updatePSKList()"><option>Delhi</option><option>Maharashtra</option><option>Karnataka</option><option>Uttar Pradesh</option><option>Tamil Nadu</option></select></div>
+            <div class="form-group"><label class="form-label">Select PSK *</label><select class="form-select" id="psk-select"><option>PSK Dwarka, New Delhi</option><option>PSK Janakpuri, New Delhi</option><option>PSK Rohini, New Delhi</option><option>PSK Saket, New Delhi</option></select></div>
+          </div>
+        </div>
+      </div>
+      <div class="form-card">
+        <div class="form-card-header"><div class="form-card-icon">📅</div><div><div class="form-card-title">Select Date &amp; Time Slot</div><div class="form-card-subtitle">Slots marked in bold are available</div></div></div>
+        <div class="form-card-body">
+          <div class="appt-grid">
+            <div>
+              <div class="appt-calendar-header"><button class="cal-nav">‹</button><div class="cal-month">March 2025</div><button class="cal-nav">›</button></div>
+              <div class="cal-grid">
+                <div class="cal-day-label">Su</div><div class="cal-day-label">Mo</div><div class="cal-day-label">Tu</div><div class="cal-day-label">We</div><div class="cal-day-label">Th</div><div class="cal-day-label">Fr</div><div class="cal-day-label">Sa</div>
+                <button class="cal-day" disabled></button><button class="cal-day" disabled></button><button class="cal-day" disabled></button>
+                <button class="cal-day past">1</button><button class="cal-day past">2</button><button class="cal-day past">3</button><button class="cal-day past">4</button>
+                <button class="cal-day past">5</button><button class="cal-day past">6</button><button class="cal-day past">7</button><button class="cal-day past">8</button><button class="cal-day past">9</button><button class="cal-day past">10</button><button class="cal-day past">11</button>
+                <button class="cal-day past">12</button><button class="cal-day past">13</button><button class="cal-day past">14</button><button class="cal-day past">15</button><button class="cal-day past">16</button><button class="cal-day past">17</button><button class="cal-day past">18</button>
+                <button class="cal-day past">19</button>
+                <button class="cal-day today available" onclick="selectDate(this,'20 Mar')">20</button>
+                <button class="cal-day available" onclick="selectDate(this,'21 Mar')">21</button>
+                <button class="cal-day available" onclick="selectDate(this,'22 Mar')">22</button>
+                <button class="cal-day available" onclick="selectDate(this,'23 Mar')">23</button>
+                <button class="cal-day available" onclick="selectDate(this,'24 Mar')">24</button>
+                <button class="cal-day available" onclick="selectDate(this,'25 Mar')">25</button>
+                <button class="cal-day" disabled>26</button>
+                <button class="cal-day available" onclick="selectDate(this,'27 Mar')">27</button>
+                <button class="cal-day selected available" onclick="selectDate(this,'28 Mar')">28</button>
+                <button class="cal-day available" onclick="selectDate(this,'29 Mar')">29</button>
+                <button class="cal-day available" onclick="selectDate(this,'30 Mar')">30</button>
+                <button class="cal-day available" onclick="selectDate(this,'31 Mar')">31</button>
+              </div>
+            </div>
+            <div>
+              <div style="font-family:var(--font-display);font-weight:700;color:var(--navy);font-size:0.9rem;margin-bottom:12px;">Available Slots — Friday, 28 Mar</div>
+              <div class="time-slot-grid">
+                <button class="time-slot full">9:00 AM</button><button class="time-slot full">9:30 AM</button>
+                <button class="time-slot" onclick="selectSlot(this)">10:00 AM</button>
+                <button class="time-slot selected" onclick="selectSlot(this)">10:30 AM</button>
+                <button class="time-slot" onclick="selectSlot(this)">11:00 AM</button>
+                <button class="time-slot full">11:30 AM</button>
+                <button class="time-slot" onclick="selectSlot(this)">12:00 PM</button>
+                <button class="time-slot full">2:00 PM</button>
+                <button class="time-slot" onclick="selectSlot(this)">2:30 PM</button>
+                <button class="time-slot" onclick="selectSlot(this)">3:00 PM</button>
+                <button class="time-slot full">3:30 PM</button>
+                <button class="time-slot" onclick="selectSlot(this)">4:00 PM</button>
+              </div>
+              <div style="display:flex;gap:12px;margin-top:14px;font-size:0.75rem;color:var(--gray-400);">
+                <span style="display:flex;align-items:center;gap:5px;"><span style="width:10px;height:10px;background:var(--blue);border-radius:3px;display:inline-block;"></span>Selected</span>
+                <span style="display:flex;align-items:center;gap:5px;"><span style="width:10px;height:10px;background:var(--gray-100);border-radius:3px;display:inline-block;"></span>Available</span>
+                <span style="display:flex;align-items:center;gap:5px;"><span style="width:10px;height:10px;background:var(--gray-200);border-radius:3px;display:inline-block;"></span>Full</span>
+              </div>
+              <div class="appt-summary">
+                <h5>📋 Appointment Summary</h5>
+                <div class="appt-row"><span>PSK Location</span><span class="appt-val">Dwarka, New Delhi</span></div>
+                <div class="appt-row"><span>Date</span><span class="appt-val">Friday, 28 March 2025</span></div>
+                <div class="appt-row"><span>Time</span><span class="appt-val">10:30 AM</span></div>
+                <div class="appt-row"><span>Fee</span><span class="appt-val" style="color:var(--blue);">₹1,500 (to be paid at PSK)</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flow-footer-nav">
+        <button class="btn-back" onclick="showScreen('screen-docs')">← Back to Documents</button>
+        <span style="font-size:0.82rem;color:var(--gray-400);">Review &amp; submit</span>
+        <button class="btn-next" onclick="submitApplication()">Submit Application ✓</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════ SCREEN 7: CONFIRMATION ════════════════════ -->
+<div id="screen-confirm" class="screen">
+  <nav class="navbar">
+    <div class="navbar-logo" onclick="showScreen('screen-home')"><span class="flag">🇮🇳</span>Passport<span>Seva</span></div>
+    <div class="navbar-links"><button class="nav-btn" onclick="showScreen('screen-dashboard')">Go to Dashboard</button></div>
+  </nav>
+  <div class="confirm-wrap">
+    <div class="confirm-box">
+      <div class="confirm-icon">🎉</div>
+      <div class="confirm-title">Application Submitted!</div>
+      <div class="confirm-subtitle">Your passport application has been successfully submitted. You will receive an SMS and email confirmation shortly.</div>
+      <div class="confirm-id-box">
+        <div><div class="confirm-id-label">Application ID</div><div class="confirm-id-value">PSK-2025-00412</div></div>
+        <button onclick="copyID()" style="background:none;border:1px solid var(--gray-200);color:var(--gray-600);padding:8px 14px;border-radius:8px;font-size:0.78rem;cursor:pointer;font-family:var(--font-body);font-weight:600;">📋 Copy</button>
+      </div>
+      <div class="confirm-actions">
+        <button class="btn-outline">📥 Download PDF Receipt</button>
+        <button class="btn-outline">📧 Email Confirmation</button>
+        <button class="btn-outline">📤 Share Application ID</button>
+      </div>
+      <div class="confirm-timeline">
+        <h5>What happens next?</h5>
+        <div class="timeline-item"><div class="timeline-dot tl-done">✓</div><div class="timeline-text"><div class="timeline-label">Application Submitted</div><div class="timeline-date">Today, 20 March 2025</div></div></div>
+        <div class="timeline-item"><div class="timeline-dot tl-upcoming">→</div><div class="timeline-text"><div class="timeline-label">PSK Appointment</div><div class="timeline-date">Friday, 28 March 2025 · 10:30 AM · Dwarka PSK</div></div></div>
+        <div class="timeline-item"><div class="timeline-dot tl-pending">3</div><div class="timeline-text"><div class="timeline-label">Police Verification</div><div class="timeline-date">Estimated: 5–7 working days after PSK visit</div></div></div>
+        <div class="timeline-item"><div class="timeline-dot tl-pending">4</div><div class="timeline-text"><div class="timeline-label">Passport Dispatch</div><div class="timeline-date">Estimated: 7–15 working days post verification</div></div></div>
+        <div class="timeline-item"><div class="timeline-dot tl-pending">🏠</div><div class="timeline-text"><div class="timeline-label">Doorstep Delivery via Speed Post</div><div class="timeline-date">Estimated: Total 3–4 weeks</div></div></div>
+      </div>
+      <button class="btn-full" style="margin-top:24px;" onclick="showScreen('screen-dashboard')">Back to Dashboard →</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST NOTIFICATION -->
+<div class="toast success" id="toast">
+  <span class="toast-icon">✓</span>
+  <span id="toast-msg">Saved successfully</span>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
