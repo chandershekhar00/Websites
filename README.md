@@ -97,7 +97,7 @@ This project reimagines the passport application process by simplifying complex 
 ## 👤 Author
 
 **Chandrashekhar Tyagi**
-📧 [chandrashekhar8433@gmail.com](mailto:chandrashekhar8433@gmail.com)
+📧 [chandershekhar8433@gmail.com](mailto:chandershekhar8433@gmail.com)
 
 ---
 
@@ -111,6 +111,3 @@ This project demonstrates a complete UX redesign focusing on **clarity, simplici
 
 Give it a ⭐ on GitHub!
 
----
-✅ Add **GitHub portfolio-level styling**
-✅ Or write a **short description for your repo title**
